@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+
+  api:
+    container_name: my_ml_api
+    restart: always
+    build: ./my_api
+    volumes: ['./my_api:/my_api']
+    networks:
+      - mlnetwork
+    expose:
+      - "5000"
+    ports:
+      - "5000:5000"
+
+  nginx:
+    container_name: nginx
+    restart: always
+    build: ./nginx
+    networks:
+      - mlnetwork
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
+
+networks:
+  sfmlnetwork:
