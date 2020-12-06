@@ -25,14 +25,16 @@ sudo usermod -a -G docker ec2-user
 sudo yum install git -y
 
 # CLONE REPO
-git clone https://github.com/carfra2322/sfml2
+git clone https://github.com/carfra2322/my_mlapi.git
 
 # CHANGE DIRECTORY
-cd sfml2
+cd my_mlapi
 
-# DOWNLOAD TEST AND TRAIN DATA
-wget -O api/exercise_26_test.csv https://sf-ml-role.s3.amazonaws.com/exercise_26_test.csv
-wget -O api/exercise_26_train.csv https://sf-ml-role.s3.amazonaws.com/exercise_26_train.csv
+# DOWNLOAD PICkLE FILES
+aws s3 cp s3://mycapstonebucket/num_topics.pkl num_topics.pkl
+aws s3 cp s3://mycapstonebucket/lda.pkl lda.pkl
+aws s3 cp s3://mycapstonebucket/covid.pkl covid.pkl
+aws s3 cp s3://mycapstonebucket/num_topics.pkl num_topics.pkl
 
 # BUILD AND DEPLOY DOCKERS
 sudo docker-compose build
