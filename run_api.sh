@@ -30,7 +30,7 @@ git clone https://github.com/carfra2322/my_mlapi.git
 # CHANGE DIRECTORY
 cd my_mlapi
 
-# DOWNLOAD PICkLE FILES
+# DOWNLOAD PICKLE FILES
 aws s3 cp s3://mycapstonebucket/num_topics.pkl num_topics.pkl
 aws s3 cp s3://mycapstonebucket/lda.pkl lda.pkl
 aws s3 cp s3://mycapstonebucket/covid.pkl covid.pkl
