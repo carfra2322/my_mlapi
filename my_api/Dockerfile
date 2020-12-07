@@ -13,6 +13,7 @@ RUN pip3 install -r requirements.txt
 
 # COPY APP
 COPY . /
+RUN ls
 WORKDIR /
 
 # RUN WSGI SERVER

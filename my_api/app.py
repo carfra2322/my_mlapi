@@ -23,16 +23,16 @@ nlp = en_core_sci_lg.load(disable=['tagger', 'ner'])
 nlp.max_length = 7000000
 
 # LOAD COUNTVECTOR
-cv = joblib.load('cv.pkl')
+cv = joblib.load('my_mlapi/cv.pkl')
 
 # LOAD LDA MODEL
-lda = joblib.load('lda.pkl')
+lda = joblib.load('my_mlapi/lda.pkl')
 
 # LOAD COVIDDF
-df = joblib.load('covid.pkl')
+df = joblib.load('my_mlapi/covid.pkl')
 
 # LOAD NUMTOPICS
-num_topics = joblib.load('num_topics.pkl')
+num_topics = joblib.load('my_mlapi/num_topics.pkl')
 
 stop_words = list(STOP_WORDS)
 medical_stop_words = ['doi', 'preprint', 'copyright', 'peer', 'reviewed', 'org', 'https', 'et', 'al',
