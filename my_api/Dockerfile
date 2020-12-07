@@ -12,8 +12,10 @@ WORKDIR /tmp
 RUN pip3 install -r requirements.txt
 
 # COPY APP
-COPY . .
+COPY . /my_api
 WORKDIR /
+COPY . .
+RUN ls
 
 # RUN WSGI SERVER
 CMD ["gunicorn", "-w", "3", "-b", ":5000", "-t", "360", "--reload", "my_api.my_wsgi:app"]
