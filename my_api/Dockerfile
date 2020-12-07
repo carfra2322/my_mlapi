@@ -12,7 +12,7 @@ WORKDIR /tmp
 RUN pip3 install -r requirements.txt
 
 # COPY APP
-COPY . /my_api
+COPY . .
 WORKDIR /
 
 # RUN WSGI SERVER
