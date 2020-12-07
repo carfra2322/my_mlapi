@@ -12,7 +12,8 @@ WORKDIR /tmp
 RUN pip3 install -r requirements.txt
 
 # COPY APP
-COPY . /
+COPY . /my_api
+WORKDIR /my_mlapi/my_api
 RUN ls
 WORKDIR /
 
