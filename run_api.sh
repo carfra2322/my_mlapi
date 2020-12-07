@@ -34,7 +34,7 @@ cd my_mlapi
 aws s3 cp s3://mycapstonebucket/num_topics.pkl num_topics.pkl
 aws s3 cp s3://mycapstonebucket/lda.pkl lda.pkl
 aws s3 cp s3://mycapstonebucket/covid.pkl covid.pkl
-aws s3 cp s3://mycapstonebucket/num_topics.pkl num_topics.pkl
+aws s3 cp s3://mycapstonebucket/cv.pkl cv.pkl
 
 # BUILD AND DEPLOY DOCKERS
 sudo docker-compose build
