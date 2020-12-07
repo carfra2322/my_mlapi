@@ -31,10 +31,10 @@ git clone https://github.com/carfra2322/my_mlapi.git
 cd my_mlapi
 
 # DOWNLOAD PICKLE FILES
-aws s3 cp s3://mycapstonebucket/num_topics.pkl num_topics.pkl
-aws s3 cp s3://mycapstonebucket/lda.pkl lda.pkl
-aws s3 cp s3://mycapstonebucket/covid.pkl covid.pkl
-aws s3 cp s3://mycapstonebucket/num_topics.pkl num_topics.pkl
+aws s3 cp s3://mycapstonebucket/num_topics.pkl my_api/num_topics.pkl
+aws s3 cp s3://mycapstonebucket/lda.pkl my_api/lda.pkl
+aws s3 cp s3://mycapstonebucket/covid.pkl my_api/covid.pkl
+aws s3 cp s3://mycapstonebucket/num_topics.pkl my_api/num_topics.pkl
 
 # BUILD AND DEPLOY DOCKERS
 sudo docker-compose build
