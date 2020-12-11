@@ -8,8 +8,12 @@ import string
 from sklearn.feature_extraction.text import CountVectorizer
 from collections import Counter
 import json
+from flask_cors import CORS, cross_origin
+
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 # LOAD NLP FROM PICKLE FILE
 # nlp = joblib.load('nlp.pkl')
@@ -44,11 +48,13 @@ stop_words = list(set(stop_words))  # Remove duplicates
 
 
 @app.route("/")
+@cross_origin()
 def hello():
     return "Hello World!"
 
 
 @app.route("/classify/<string:newTextData>")
+@cross_origin()
 def classifyNewData(newTextData):
     newCovidDF = pd.DataFrame(df)
     # newCovidDF = pd.DataFrame(covidDF)
